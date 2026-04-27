@@ -1,21 +1,27 @@
-//
-//  ContentView.swift
-//  Receiptly
-//
-//  Created by Volodymyr Miasnykov on 2026-04-27.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            
+            Text("Receiptly")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            
+            Button(action: {
+                print("Scan button tapped")
+            }) {
+                Text("Scan Receipt")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(12)
+            }
+            .padding(.horizontal)
+            
         }
-        .padding()
     }
 }
 
